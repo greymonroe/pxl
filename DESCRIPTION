@@ -1,0 +1,15 @@
+Package: pxl
+Title: Pixel-to-Nucleotide Text Art
+Version: 0.1.0
+Authors@R: person("Grey", "Monroe", email = "gmonroe@ucdavis.edu", role = c("aut","cre"))
+Description: Convert images to nucleotide-letter art using ggplot2.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: false
+Imports:
+    data.table,
+    ggplot2,
+    tiff,
+    grDevices,
+    utils
+RoxygenNote: 7.3.2
