@@ -33,13 +33,9 @@ image_nt_dt <- function(path, nt_vec, stride = 1L) {
   grid <- as.matrix(expand.grid(row = rows, col = cols))
 
   # per-pixel color (RGB or grayscale)
-  if (length(dims) >= 3L && dims[3] >= 3L) {
     pix_col <- mapply(function(r, c) grDevices::rgb(nut[r, c, 1], nut[r, c, 2], nut[r, c, 3]),
                       grid[,1], grid[,2])
-  } else {
-    vals <- nut[cbind(grid[,1], grid[,2])]
-    pix_col <- grDevices::gray(vals)
-  }
+
 
   DT <- data.table::data.table(
     y   = grid[,1],
