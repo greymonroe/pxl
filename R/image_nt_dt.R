@@ -17,7 +17,7 @@
 #'                   stride = 10)
 #' }
 #' @export
-image_nt_dt <- function(path, nt_vec, stride = 1L) {
+image_nt_dt <- function(path, nt_vec, stride = 1) {
   if (!file.exists(path)) stop("File not found: ", path)
   if (stride < 1L) stop("stride must be >= 1.")
 
